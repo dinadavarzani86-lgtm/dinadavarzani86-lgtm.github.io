@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>منوی رستوران</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f3ea;
+    --ink: #1f2a24;
+    --green: #1f5c45;
+    --saffron: #e0a030;
+    --line: #ddd5c3;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  header {
+    background: var(--green);
+    color: #fff;
+    padding: 36px 20px;
+    text-align: center;
+  }
+  header h1 { font-size: 2rem; font-weight: 800; }
+  header p { opacity: .85; margin-top: 6px; }
+
+  main { max-width: 640px; margin: 0 auto; padding: 20px; }
+  h2 {
+    font-size: 1.2rem;
+    margin: 28px 0 8px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--saffron);
+  }
+
+  /* هر غذا: اسم و توضیح سمت راست، قیمت سمت چپ */
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .item h3 { font-size: 1rem; font-weight: 600; }
+  .item p { color: #6b6b60; font-size: .9rem; margin-top: 2px; }
+  .price { color: var(--green); font-weight: 600; white-space: nowrap; }
+
+  .order {
+    display: block;
+    margin: 32px 0;
+    padding: 14px;
+    background: #25d366;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+  .order:hover { background: #1ebd5a; }
+
+  /* روی صفحه‌های بزرگ‌تر کمی فضا بیشتر */
+  @media (min-width: 768px) {
+    header h1 { font-size: 2.6rem; }
+    main { padding: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>رستوران نمونه</h1>
+  <p>هر روز از ۱۲ تا ۲۳</p>
+</header>
+
+<main>
+
+  <h2>غذاهای اصلی</h2>
+  <div class="item">
+    <div>
+      <h3>چلوکباب کوبیده</h3>
+      <p>دو سیخ، برنج ایرانی</p>
+    </div>
+    <span class="price">۲۲۰,۰۰۰ تومان</span>
+  </div>
+  <div class="item">
+    <div>
+      <h3>جوجه‌کباب</h3>
+      <p>سینه‌ی مرغ زعفرانی</p>
+    </div>
+    <span class="price">۱۹۵,۰۰۰ تومان</span>
+  </div>
+  <div class="item">
+    <div>
+      <h3>قورمه‌سبزی</h3>
+      <p>با برنج و ترشی</p>
+    </div>
+    <span class="price">۱۷۰,۰۰۰ تومان</span>
+  </div>
+
+  <h2>پیتزا</h2>
+  <div class="item">
+    <div>
+      <h3>پیتزا مخصوص</h3>
+      <p>گوشت، قارچ، فلفل</p>
+    </div>
+    <span class="price">۲۴۰,۰۰۰ تومان</span>
+  </div>
+  <div class="item">
+    <div>
+      <h3>پیتزا مارگاریتا</h3>
+      <p>پنیر و ریحان</p>
+    </div>
+    <span class="price">۱۹۰,۰۰۰ تومان</span>
+  </div>
+
+  <h2>نوشیدنی</h2>
+  <div class="item">
+    <div><h3>دوغ</h3></div>
+    <span class="price">۲۵,۰۰۰ تومان</span>
+  </div>
+  <div class="item">
+    <div><h3>نوشابه</h3></div>
+    <span class="price">۲۰,۰۰۰ تومان</span>
+  </div>
+
+  <!-- شماره رو با کد کشور و بدون صفر اول و بدون + بنویس -->
+  <a class="order" href="https://wa.me/989120000000?text=سلام، می‌خوام سفارش بدم">
+    سفارش در واتساپ
+  </a>
+
+</main>
+
+</body>
+</html>
